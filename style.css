@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --Dark-Violet: hsl(256, 26%, 20%);
+  --Grayish-blue: hsl(216, 30%, 68%);
+  --Very-Dark-Violet: hsl(270, 9%, 17%);
+  --Dark-Grayish-Violet: hsl(273, 4%, 51%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Serif Display", serif;
+}
+
+h1 {
+  font-size: 11vw;
+  line-height: 1;
+}
+
+p {
+  font-family: "Karla", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-transform: uppercase;
+}
+
+nav div button {
+  width: 120px;
+  height: 40px;
+  text-transform: uppercase;
+  border: 2px solid var(--Dark-Grayish-Violet);
+  cursor: wait;
+}
+
+.small-device {
+  background-color: var(--Very-Dark-Violet);
+}
+
+.small-device img {
+  width: 100%;
+}
+
+.small-image-box {
+  position: relative;
+  padding: 2rem 0;
+  height: auto;
+}
+
+.small-image-box .imageA {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 200px;
+}
+
+.small-image-box .imageB {
+  position: absolute;
+  bottom: -20%;
+  right: 0;
+  width: 50vw;
+  height: 200px;
+}
+
+.small-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  color: var(--Very-Light-Gray);
+  padding: 6rem 1rem;
+}
+
+.small-text h1 {
+  z-index: 3;
+}
+
+.button {
+  width: 120px;
+  height: 32px;
+  text-transform: uppercase;
+  color: var(--Very-Light-Gray);
+  border: 2px solid var(--Very-Light-Gray);
+  background-color: var(--Very-Dark-Violet);
+  cursor: crosshair;
+}
+
+.card {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-layout {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 2rem;
+}
+
+hr {
+  width: 120px;
+}
+
+.card-layout h1,
+.card-layout hr {
+  color: var(--Dark-Violet);
+  margin: 0 auto;
+}
+
+.grid-inner-box p{
+  color: var(--Dark-Grayish-Violet);
+}
+
+.grid-box {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-inner-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.grid-inner-box img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.info-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin: 5rem 1.5rem;
+}
+.info-box {
+  background-color: var(--Dark-Violet);
+  position: relative;
+  /* margin: 4rem 1rem; */
+}
+
+.imageE {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.info-box div:nth-child(2) {
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.info-box div:nth-child(2) h1 {
+  color: var(--Very-Light-Gray);
+  padding-bottom: 2rem;
+  z-index: 3
+  ;
+}
+
+
+
+
+
+
+@media screen and (min-width: 1400px) {
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 5vw !important;
+  }
+
+  nav div {
+    display: flex !important;
+  }
+
+  .small-device {
+    display: none;
+  }
+
+  .large-device {
+    display: flex !important;
+    background-color: var(--Very-Dark-Violet);
+    position: relative;
+  }
+
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 1rem;
+    color: var(--Very-Light-Gray);
+    position: relative;
+  }
+
+  .hero div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+  }
+
+  hr {
+    width: 120px;
+  }
+
+  .button {
+    width: 120px;
+    height: 32px;
+    text-transform: uppercase;
+    color: var(--Very-Light-Gray);
+    border: 2px solid var(--Very-Light-Gray);
+    background-color: var(--Very-Dark-Violet);
+    cursor: crosshair;
+  }
+
+  /* ?to target the second DIV in the desktop hero section that contains the img, we use the nth child */
+  .hero div:nth-child(2) {
+    width: 45%;
+    height: 500px;
+    position: absolute;
+    top: 18%;
+    right: 2%;
+  }
+
+  .hero div:nth-child(2) img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .imageC {
+    position: absolute;
+    left: 0;
+    top: 85%;
+    height: 300px;
+  }
+
+  .imageD {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 400px;
+  }
+
+  .card-layout {
+    margin-top: 12rem;
+  }
+  .card-layout h1,
+  hr {
+    margin: 0 auto 0rem 0;
+  }
+
+  .grid-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid-inner-box,
+  .grid-inner-box img {
+    text-align: start;
+    margin: 0 0 0 0;
+  }
+  .imageE {
+    display: none;
+  }
+
+  .imageF {
+    display: block !important;
+  }
+  
+  .info-layout{
+    margin: 0rem auto;
+  }
+
+  .info-box div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .imageF{
+    display: block!important;
+    position:absolute;
+    top: 0;
+    right: 0;
+  }
+
+
+
+}
+
+@media screen and (min-width: 280px) {
+  nav div {
+    display: none;
+  }
+  .large-device {
+    display: none;
+  }
+  .imageF {
+    display: none;
+  }
+}
